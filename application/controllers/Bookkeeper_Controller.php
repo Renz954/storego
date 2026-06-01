@@ -9,7 +9,7 @@ class Bookkeeper_Controller extends CI_Controller
         $this->load->library('session');
         $this->load->model('Bookkeeper_Model');
         $this->load->helper('text');
-        $this->load->library('ppdf');
+        // $this->load->library('ppdf');
         $this->load->model('Login_model');
     }
 
