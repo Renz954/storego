@@ -56,8 +56,7 @@ class Welcome extends CI_Controller {
                     redirect(base_url('Accounting_Access'));
                 }
                 else if($designation == "Store Bookkeeper"){
-                    // redirect(base_url('Bookkeeper_Access'));
-                    echo 'sfdfdffs';
+                    redirect(base_url('Bookkeeper_Access'));
                 }
                 else
                 {
