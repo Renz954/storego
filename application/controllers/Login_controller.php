@@ -43,7 +43,7 @@ class Login_controller extends CI_Controller
                 }
                 else if($designation == "Store Bookkeeper"){
                     redirect(base_url('Bookkeeper_Access'));
-                    echo'dfdfsfffdf';
+                    echo'dfdfsfffdffffff';
                 }
                 else
                 {
