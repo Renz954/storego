@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://'.$_SERVER['SERVER_ADDR'].':'.$_SERVER['SERVER_PORT'].'/storego/CodeIgniter'; 
-$config['base_url'] = 'http://'.$_SERVER['SERVER_ADDR'].'/storego/StoregoAllocationV2'; 
+$config['base_url'] = 'https://pdfexcelrenz.page.gd/storego/';
 /*
 |--------------------------------------------------------------------------
 | Index File
