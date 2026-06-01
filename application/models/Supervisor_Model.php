@@ -6,7 +6,7 @@ class Supervisor_Model extends CI_Model
     {
         parent::__construct();
         $this->load->database();
-        $this->db2 = $this->load->database('pis', TRUE);
+        // $this->db2 = $this->load->database('pis', TRUE);
        
     }
 
