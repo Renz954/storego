@@ -1,61 +1,59 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Login_controller extends CI_Controller
 {
+
     function __construct()
     {
         parent::__construct();
-
         $this->load->library('session');
         $this->load->model('Login_model');
-        $this->load->helper('url');
+         $this->load->helper('url');
 
-        // Disable caching
-        $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
-        $this->output->set_header('Pragma: no-cache');
+    // Disable caching
+    $this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
+    $this->output->set_header('Pragma: no-cache');
 
-        // ✅ FIXED SESSION CHECK (CI WAY)
-        $user_id = $this->session->userdata('id');
-
-        if (!empty($user_id))
+        if (isset($_SESSION['id'])) 
         {
-            if ($this->Login_model->getUserCountById($user_id) > 0)
+            if ($this->Login_model->getUserCountById($_SESSION['id']) > 0) 
             {
-                $designation = $this->Login_model->getUserType($user_id);
-
+                $designation = $this->Login_model->getUserType($_SESSION['id']);
+                $buHandle = $this->Login_model->getBU_Handle($_SESSION['id']);
                 if ($designation == "Administrator") {
                     redirect(base_url('Administrator_Access'));
                 }
-                else if ($designation == "Hrd") {
+                else if($designation == "Hrd"){
                     redirect(base_url('Hrd_Access'));
                 }
-                else if ($designation == "Leasing") {
+                else if($designation == "Leasing"){
                     redirect(base_url('Leasing_Access'));
                 }
-                else if ($designation == "SSD") {
+                else if($designation == "SSD"){
                     redirect(base_url('SSD_Access'));
                 }
-                else if ($designation == "Store Engineer") {
+                else if($designation == "Store Engineer"){
                     redirect(base_url('Engineer_Access'));
                 }
-                else if ($designation == "Finance") {
+                else if($designation == "Finance"){
                     redirect(base_url('Finance_Access'));
                 }
-                else if ($designation == "Accounting Supervisor") {
+                else if($designation == "Accounting Supervisor"){
                     redirect(base_url('Accounting_Access'));
                 }
-                else if ($designation == "Store Bookkeeper") {
+                else if($designation == "Store Bookkeeper"){
                     redirect(base_url('Bookkeeper_Access'));
                 }
-                else {
+                else
+                {
                     $this->session->sess_destroy();
-                    redirect(base_url('Login_controller/index'));
+                     redirect(base_url('Login_controller/index'));
                 }
-            }
-            else
+                
+            } 
+            else 
             {
-                $this->session->unset_userdata('id');
+                unset($_SESSION['id']);
             }
         }
     }
@@ -64,26 +62,25 @@ class Login_controller extends CI_Controller
     {
         $this->load->view('login');
     }
-
+    
     function login_ctrl()
     {
-        // ✅ FIXED INPUT (secure CI method)
-        $user = $this->input->post('user', TRUE);
-        $pass = $this->input->post('pass', TRUE);
+        $user = $_POST["user"];
+        $pass = $_POST["pass"];
+        $id = $this->Login_model->retrieveAccountID($user,$pass);
 
-        $id = $this->Login_model->retrieveAccountID($user, $pass);
-
-        if ($id < 1)
+        if($id<1)
         {
-            $validate = "Error Login";
+            $validate="Error Login";
         }
         else
         {
-            // ✅ FIXED SESSION SET
-            $this->session->set_userdata('id', $id);
-            $validate = "Successfully login";
-        }
-
-        echo json_encode(array('response' => $validate));
+            $_SESSION['id'] = $id;
+            $validate="Successfully login";
+        }  
+            $data['response']=$validate;
+            echo json_encode($data);   
     }
 }
+
+?>
