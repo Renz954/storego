@@ -15,20 +15,19 @@ class Bookkeeper_Controller extends CI_Controller
 
     public function bookkeeper_homepage()   
     {
-        // if($_SESSION['id'] == NULL || $this->Login_model->getUserType($_SESSION['id'])!="Store Bookkeeper")
-        // {
-        //     // unset($_SESSION['id']);
-        //     redirect(base_url('Login_controller/index'));
-        // }
-        // else
-        // {
-        //     $data['profile'] = $this->Bookkeeper_Model->get_profile($_SESSION['id']);
-        //     $data['bu_id'] = $this->Bookkeeper_Model->getBU_Handle($_SESSION['id']);
-        //     $this->load->view('bookkeeper_view/templates/bookkeeper_header', $data);
-        //     $this->load->view('bookkeeper_view/bookkeeper_body');
-        //     $this->load->view('bookkeeper_view/templates/bookkeeper_footer');
-        // }
-        echo'nisod';
+        if($_SESSION['id'] == NULL || $this->Login_model->getUserType($_SESSION['id'])!="Store Bookkeeper")
+        {
+            // unset($_SESSION['id']);
+            redirect(base_url('Login_controller/index'));
+        }
+        else
+        {
+            $data['profile'] = $this->Bookkeeper_Model->get_profile($_SESSION['id']);
+            $data['bu_id'] = $this->Bookkeeper_Model->getBU_Handle($_SESSION['id']);
+            $this->load->view('bookkeeper_view/templates/bookkeeper_header', $data);
+            $this->load->view('bookkeeper_view/bookkeeper_body');
+            $this->load->view('bookkeeper_view/templates/bookkeeper_footer');
+        }
         
     }
 
