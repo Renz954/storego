@@ -138,7 +138,7 @@
                             {
                                echo '<a href="index.html">
         <img class="logo_icon img-responsive"
-             src="'.base_url('assets/images/'.$pic['profile']).'"
+             src="' . base_url() . '/assets/images/' . $pic['profile'] . '"
              alt="#"
              style="border-radius:50px;width:80px;height:75px;background-color:aliceblue;" />
       </a>';
