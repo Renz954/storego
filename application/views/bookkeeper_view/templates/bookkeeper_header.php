@@ -136,7 +136,7 @@
                          <?php
                             foreach($profile as $pic)
                             {
-                                echo'<a href="index.html"><img class="logo_icon img-responsive" src="http://172.16.161.100/storego/StoregoAllocationV2/assets/images/'.$pic['profile'].'" alt="#" style="border-radius: 50px; width: 80px; height: 75px; background-color: aliceblue;"/></a>';
+                                echo'<a href="index.html"><img class="logo_icon img-responsive" src="'<?php echo base_url('assets/images/'.$pic['profile']); ?>'" alt="#" style="border-radius: 50px; width: 80px; height: 75px; background-color: aliceblue;"/></a>';
                             }
                         ?>
                      </div>
