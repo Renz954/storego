@@ -151,7 +151,7 @@
                   <div class="sidebar_user_info">
                     <div class="icon_setting"></div>
                     <div class="user_profle_side">
-                        <div style="background-image: url('http://172.16.161.100/storego/StoregoAllocationV2/assets/images/logo/store_go_logo.png'); background-repeat: no-repeat; background-size: contain; width: 200px; height: 200px; margin-top: -71px; margin-bottom: -62px;"></div>
+                        <div style="background-image: url('assets/images/logo/store_go_logo.png'); background-repeat: no-repeat; background-size: contain; width: 200px; height: 200px; margin-top: -71px; margin-bottom: -62px;"></div>
                         <!-- Adjust width and height values as needed -->
                         <!-- Other content -->
                     </div>
@@ -215,7 +215,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="full">
             <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
-            <div style="background: url('http://172.16.161.100/storego/StoregoAllocationV2/assets/images/logo/SSD.png') no-repeat ; background-size: contain;height: 251px; margin-top: -85px; margin-bottom: -206px; padding-bottom: 53px; margin-left: 67px;">
+            <div style="background: url('assets/images/logo/SSD.png') no-repeat ; background-size: contain;height: 251px; margin-top: -85px; margin-bottom: -206px; padding-bottom: 53px; margin-left: 67px;">
                 <!-- You can adjust the height and other properties here -->
             </div>
             <div class="right_topbar">

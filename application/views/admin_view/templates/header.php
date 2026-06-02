@@ -194,7 +194,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="full">
             <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
-            <div style="background: url('http://172.16.161.100/storego/StoregoAllocationV2/assets/images/ADMINISTRATOR.png') no-repeat ; background-size: contain;height: 274px; margin-top: -93px; margin-bottom: -206px; padding-bottom: 53px; margin-left: 67px;">
+            <div style="background: url('assets/images/ADMINISTRATOR.png') no-repeat ; background-size: contain;height: 274px; margin-top: -93px; margin-bottom: -206px; padding-bottom: 53px; margin-left: 67px;">
                 <!-- You can adjust the height and other properties here -->
             </div>
             <div class="right_topbar">
