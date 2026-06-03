@@ -50,9 +50,14 @@
             <div class="center verticle_center full_height">
                 <div class="login_section">
                     <div class="logo_login">
-                        <div class="center" style="background: url('assets/images/logo/store_go_logo.png') no-repeat center center; background-size: contain;height: 290px; margin-top: -127px; margin-bottom: -108px; padding-bottom: 53px;">
-                            <!-- <img width="410" height="500" src="/storego/StoregoAllocationV2/assets/images/logo/store_go_logo.png" alt="#" /> -->
-                        </div>
+                        <div class="center"
+     style="background: url('<?php echo base_url('assets/images/logo/store_go_logo.png'); ?>') no-repeat center center;
+            background-size: contain;
+            height: 290px;
+            margin-top: -127px;
+            margin-bottom: -108px;
+            padding-bottom: 53px;">
+</div>
                     </div>
                     <div class="login_form">
                         <form id="loginUserForm">
