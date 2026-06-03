@@ -15,7 +15,7 @@
         .circle-frame:hover {
             transform: scale(1.1);
         }
-
+  
         
 
         #table_style {
